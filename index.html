@@ -1,27 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
 
     <title>Formulario básico HTML5</title>
-</head>
+  </head>
 
-<body class="container">
-    <form method="post" action="">
+  <body class="container">
+    <form method="post" action="https://singulars2023.free.beeceptor.com">
+      <fieldset>
+        <label for="nombre">Nombre: </label>
+        <input
+          type="text"
+          required
+          maxlength="50"
+          placeholder="Óscar"
+          name="nombre"
+          id="nombre"
+        />
 
-        <fieldset>
+        <label for="edad">Edad: </label>
+        <input
+          type="number"
+          required
+          min="18"
+          max="99"
+          placeholder="27"
+          name="edad"
+          id="edad"
+        />
 
-            <label for="nombre">Nombre: </label>
-            <input type="text" required maxlength="50" placeholder="Óscar" name="nombre" id="nombre" required>
-        </fieldset>
+        <label for="dni">DNI:</label>
+        <input
+          placeholder="41015799Z"
+          type="text"
+          id="dni"
+          name="dni"
+          required
+          pattern="[0-9]{A-Z}"
+        />
+      </fieldset>
 
-        <input type="submit" class="submit" id="submit" value="Enviar" />
+      <label for="ciudad">Ciudad de origen </label>
+      <input
+        type="text"
+        required
+        maxlength="100"
+        placeholder="Barcelona, Catalunya"
+        name="ciudad"
+        id="ciudad"
+      />
 
+      <label for="estudio">¿Cómo vienes a estudiar?</label>
+      <select id="estudio" name="estudio" required>
+        <option value="a pie" selected>A pie</option>
+        <option value="transporte público">Transporte público</option>
+        <option value="transporte privado">Transporte privado</option>
+      </select>
+
+      <label for="objetivos">Objetivos del curso:</label>
+        <input
+          type="text"
+          required
+          maxlength="1024"
+          placeholder="blablablabla blilbiliblbi"
+          name="objetivos"
+          id="objetivos"
+        />
+
+      <input type="submit" class="submit" id="submit" value="Enviar" />
     </form>
-</body>
-
+  </body>
 </html>
