@@ -66,16 +66,29 @@
       </select>
 
       <label for="objetivos">Objetivos del curso:</label>
-        <input
-          type="text"
-          required
-          maxlength="1024"
-          placeholder="blablablabla blilbiliblbi"
-          name="objetivos"
-          id="objetivos"
-        />
+      <input
+        type="text"
+        required
+        maxlength="1024"
+        placeholder="blablablabla blilbiliblbi"
+        name="objetivos"
+        id="objetivos"
+      />
 
       <input type="submit" class="submit" id="submit" value="Enviar" />
     </form>
+    <script>
+            document.querySelector("#edad").addEventListener
+            ('change', function (event){
+      console.dir('Edad: ', event.target.value);
+            });
+
+            document.querySelector('#Ciudad').addEventListener
+            ('change', function (event) {
+              const ciudadOrigen = event.target.value;
+              console.log('Ciudad: ', event.target.value);
+              toUpperCase();
+            });
+    </script>
   </body>
 </html>
